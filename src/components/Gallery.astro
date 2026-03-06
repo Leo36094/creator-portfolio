@@ -1,0 +1,43 @@
+---
+const items = [
+  { size: '600 × 800', desc: '直式照' },
+  { size: '600 × 400', desc: '橫式照' },
+  { size: '600 × 600', desc: '方形照' },
+  { size: '600 × 800', desc: '直式照' },
+  { size: '600 × 900', desc: '直式照' },
+  { size: '600 × 400', desc: '橫式照' },
+  { size: '600 × 600', desc: '方形照' },
+  { size: '600 × 500', desc: '橫式照' },
+];
+---
+
+<section class="gallery" id="gallery">
+  <div class="reveal">
+    <div class="section-eyebrow">Gallery</div>
+    <h2 class="section-heading">日常相簿</h2>
+  </div>
+  <div class="gallery-masonry reveal reveal-delay-1">
+    {items.map((item) => (
+      <div class="gallery-item">
+        <div class="img-ph">
+          <div class="ph-size">{item.size}</div>
+          <div class="ph-desc">{item.desc}</div>
+        </div>
+      </div>
+    ))}
+  </div>
+</section>
+
+<style>
+  .gallery { padding: 100px 48px; background: var(--white); }
+  .gallery-masonry { columns: 4; column-gap: 16px; margin-top: 48px; }
+  .gallery-item { break-inside: avoid; margin-bottom: 16px; border-radius: 14px; overflow: hidden; }
+  .gallery-item .img-ph { height: 100%; min-height: 160px; border-radius: 0; }
+  .gallery-item:nth-child(odd) .img-ph { min-height: 220px; }
+  .gallery-item:nth-child(3n) .img-ph { min-height: 280px; }
+
+  @media (max-width: 768px) {
+    .gallery { padding: 60px 20px; }
+    .gallery-masonry { columns: 2; }
+  }
+</style>

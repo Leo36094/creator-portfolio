@@ -1,0 +1,76 @@
+---
+---
+
+<section class="about" id="about">
+  <div class="about-img-stack reveal">
+    <div class="about-img-main">
+      <div class="img-ph">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/>
+        </svg>
+        <div class="ph-size">800 × 1000</div>
+        <div class="ph-desc">形象照 4:5</div>
+      </div>
+    </div>
+    <div class="about-img-accent">
+      <div class="img-ph">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/>
+        </svg>
+        <div class="ph-size">500 × 500</div>
+        <div class="ph-desc">日常照 1:1</div>
+      </div>
+    </div>
+  </div>
+  <div class="reveal reveal-delay-2">
+    <div class="about-tags">
+      <span class="tag tag-sage">🎮 遊戲</span>
+      <span class="tag tag-peach">✈️ 旅行</span>
+      <span class="tag tag-warm">🍳 料理</span>
+      <span class="tag tag-sage">📸 攝影</span>
+    </div>
+    <div class="section-eyebrow">About Me</div>
+    <h2 class="section-heading">
+      用影片<br>說<em>我的故事</em>
+    </h2>
+    <p class="about-body">
+      大家好！我是 HANA，一個熱愛遊戲、旅行和日常記錄的創作者。
+      從 2022 年開始在抖音分享生活，從遊戲直播到旅遊 Vlog，
+      每一支影片都是我真實生活的一部分。<br><br>
+      我相信最真實的內容才能打動人，所以我不追求完美，
+      只追求「真實」。
+    </p>
+    <a href="#videos" class="btn-sage">看看我的影片</a>
+  </div>
+</section>
+
+<style>
+  .about {
+    padding: 100px 48px;
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 80px;
+    align-items: center;
+    background: var(--white);
+  }
+  .about-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 28px; }
+  .about-body { font-size: 15px; line-height: 1.9; color: var(--mid); margin-bottom: 40px; }
+  .about-img-stack { position: relative; height: 480px; }
+  .about-img-main {
+    position: absolute; top: 0; right: 0;
+    width: 80%; height: 420px;
+    border-radius: 24px; overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+  }
+  .about-img-accent {
+    position: absolute; bottom: 0; left: 0;
+    width: 52%; height: 260px;
+    border-radius: 20px; overflow: hidden;
+    box-shadow: 0 16px 48px rgba(0,0,0,0.1);
+    border: 6px solid var(--white);
+  }
+
+  @media (max-width: 768px) {
+    .about { grid-template-columns: 1fr; padding: 60px 20px; }
+  }
+</style>

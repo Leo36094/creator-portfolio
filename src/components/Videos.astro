@@ -1,0 +1,100 @@
+---
+---
+
+<section class="videos" id="videos">
+  <div class="videos-header reveal">
+    <div>
+      <div class="section-eyebrow">Latest Videos</div>
+      <h2 class="section-heading" style="font-size: clamp(28px,3.5vw,42px); margin-bottom: 0;">最新影片</h2>
+    </div>
+    <a href="#" class="see-all">查看全部 →</a>
+  </div>
+  <div class="video-layout reveal reveal-delay-1">
+    <!-- Featured -->
+    <div class="video-featured">
+      <div class="vid-ph">
+        <div class="vid-label">精選影片</div>
+        <div class="vid-play-btn">
+          <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+        </div>
+        <div class="ph-size">1920 × 1080</div>
+        <div class="ph-desc">Featured Video</div>
+        <div class="vid-duration">28:14</div>
+      </div>
+      <div class="video-info">
+        <div class="video-title">【日本旅遊 Vlog】京都四天三夜，我超愛這個地方！🌸</div>
+        <div class="video-meta">
+          <span>24.5萬 次觀看</span>
+          <span>3 天前</span>
+        </div>
+      </div>
+    </div>
+    <!-- Side cards -->
+    <div class="video-card-wrap">
+      <div class="video-card">
+        <div class="vid-ph">
+          <div class="vid-label">實況</div>
+          <div class="vid-play-btn">
+            <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          </div>
+          <div class="ph-size">1280 × 720</div>
+          <div class="ph-desc">Video Thumbnail</div>
+          <div class="vid-duration">3:42:07</div>
+        </div>
+      </div>
+      <div class="video-info">
+        <div class="video-title">【Minecraft】打造夢想農場 EP.12 — 終於蓋好了！</div>
+        <div class="video-meta"><span>8.2萬 次觀看</span><span>1 週前</span></div>
+      </div>
+    </div>
+    <div class="video-card-wrap">
+      <div class="video-card">
+        <div class="vid-ph">
+          <div class="vid-label">Vlog</div>
+          <div class="vid-play-btn">
+            <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          </div>
+          <div class="ph-size">1280 × 720</div>
+          <div class="ph-desc">Video Thumbnail</div>
+          <div class="vid-duration">12:53</div>
+        </div>
+      </div>
+      <div class="video-info">
+        <div class="video-title">我的錄影設備大公開！新手必看 📷</div>
+        <div class="video-meta"><span>6.8萬 次觀看</span><span>2 週前</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .videos { padding: 100px 48px; background: var(--bg); }
+  .videos-header {
+    display: flex; align-items: flex-end; justify-content: space-between;
+    margin-bottom: 48px;
+  }
+  .see-all {
+    font-family: 'Syne', sans-serif; font-size: 13px; font-weight: 600;
+    color: var(--sage); text-decoration: none;
+    display: flex; align-items: center; gap: 6px; transition: gap 0.3s;
+  }
+  .see-all:hover { gap: 12px; }
+  .video-layout {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 20px;
+  }
+  .video-featured { grid-row: 1 / 3; border-radius: 20px; overflow: hidden; position: relative; aspect-ratio: 16/10; }
+  .video-card { border-radius: 16px; overflow: hidden; position: relative; aspect-ratio: 16/9; }
+  .video-info { padding: 16px 0 0; }
+  .video-title { font-family: 'Syne', sans-serif; font-size: 15px; font-weight: 600; color: var(--ink); margin-bottom: 6px; line-height: 1.4; }
+  .video-meta { font-size: 12px; color: var(--mid); display: flex; gap: 12px; }
+  .video-card-wrap { display: flex; flex-direction: column; }
+
+  @media (max-width: 768px) {
+    .videos { padding: 60px 20px; }
+    .video-layout { grid-template-columns: 1fr; }
+    .video-featured { grid-row: auto; aspect-ratio: 16/9; }
+  }
+</style>

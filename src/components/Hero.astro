@@ -1,0 +1,165 @@
+---
+---
+
+<section class="hero">
+  <div class="hero-content">
+    <div class="hero-badge">
+      <span class="badge-dot"></span>
+      Creator · Streamer · Vlogger
+    </div>
+    <h1 class="hero-name">
+      Hi, 我是<br>
+      <em>HANA</em> 🌿
+    </h1>
+    <p class="hero-desc">
+      分享生活日常、遊戲實況與旅行記錄。<br>
+      用鏡頭記錄每一個值得留下的瞬間。
+    </p>
+    <div class="hero-actions">
+      <a href="#videos" class="btn-sage">看最新影片</a>
+      <a href="#about" class="btn-outline">認識我</a>
+    </div>
+    <div class="hero-stats">
+      <div>
+        <div class="hero-stat-num">128K</div>
+        <div class="hero-stat-label">抖音粉絲</div>
+      </div>
+      <div>
+        <div class="hero-stat-num">340+</div>
+        <div class="hero-stat-label">支影片</div>
+      </div>
+      <div>
+        <div class="hero-stat-num">4年</div>
+        <div class="hero-stat-label">創作資歷</div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-visual">
+    <div class="hero-img-wrap">
+      <div class="img-ph">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>
+        </svg>
+        <div class="ph-size">600 × 750</div>
+        <div class="ph-desc">Profile Photo</div>
+      </div>
+    </div>
+    <div class="hero-float-card">
+      <div class="float-icon">🎮</div>
+      <div>
+        <div class="float-text-main">昨天剛直播完！</div>
+        <div class="float-text-sub">3小時 · 4,200 人收看</div>
+      </div>
+    </div>
+    <div class="hero-float-card2">
+      <span class="float-tag">🌿 本週更新中</span>
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero {
+    min-height: 100vh;
+    padding: 120px 48px 80px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: ''; position: absolute;
+    top: -10%; right: -5%;
+    width: 600px; height: 600px;
+    background: radial-gradient(ellipse, var(--peach-lt) 0%, transparent 70%);
+    border-radius: 60% 40% 70% 30% / 50% 60% 40% 50%;
+    animation: blobFloat 8s ease-in-out infinite;
+  }
+  .hero::after {
+    content: ''; position: absolute;
+    bottom: 5%; left: -8%;
+    width: 500px; height: 500px;
+    background: radial-gradient(ellipse, rgba(122,158,126,0.15) 0%, transparent 70%);
+    border-radius: 40% 60% 30% 70% / 60% 40% 60% 40%;
+    animation: blobFloat 10s ease-in-out 2s infinite reverse;
+  }
+  .hero-content { position: relative; z-index: 2; }
+  .hero-badge {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: var(--white); border: 1px solid var(--warm);
+    border-radius: 100px; padding: 8px 18px;
+    font-family: 'Syne', sans-serif; font-size: 12px; font-weight: 500;
+    color: var(--mid); letter-spacing: 0.08em; margin-bottom: 32px;
+    opacity: 0; animation: slideIn 0.8s 0.2s forwards;
+  }
+  .badge-dot {
+    width: 6px; height: 6px; border-radius: 50%;
+    background: var(--sage); animation: pulse 2s infinite;
+  }
+  .hero-name {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(52px, 7vw, 88px);
+    line-height: 1.05; color: var(--ink); margin-bottom: 20px;
+    opacity: 0; animation: slideIn 0.8s 0.4s forwards;
+  }
+  .hero-name em { font-style: italic; color: var(--sage); }
+  .hero-desc {
+    font-size: 16px; line-height: 1.8; color: var(--mid);
+    max-width: 400px; margin-bottom: 44px;
+    opacity: 0; animation: slideIn 0.8s 0.6s forwards;
+  }
+  .hero-actions {
+    display: flex; gap: 16px; flex-wrap: wrap;
+    opacity: 0; animation: slideIn 0.8s 0.8s forwards;
+  }
+  .hero-stats {
+    display: flex; gap: 32px; margin-top: 56px;
+    padding-top: 32px; border-top: 1px solid var(--bg2);
+    opacity: 0; animation: slideIn 0.8s 1s forwards;
+  }
+  .hero-stat-num {
+    font-family: 'Syne', sans-serif; font-size: 26px;
+    font-weight: 700; color: var(--ink); line-height: 1;
+  }
+  .hero-stat-label { font-size: 12px; color: var(--mid); margin-top: 4px; letter-spacing: 0.05em; }
+  .hero-visual { position: relative; z-index: 2; opacity: 0; animation: fadeIn 1.2s 0.5s forwards; }
+  .hero-img-wrap {
+    position: relative;
+    border-radius: 40% 60% 55% 45% / 50% 45% 55% 50%;
+    overflow: hidden; aspect-ratio: 4/5;
+    box-shadow: 0 30px 80px rgba(0,0,0,0.12);
+    animation: morphShape 10s ease-in-out infinite;
+  }
+  .hero-float-card {
+    position: absolute; bottom: -16px; left: -24px;
+    background: var(--white); border-radius: 16px;
+    padding: 16px 20px; box-shadow: 0 12px 40px rgba(0,0,0,0.1);
+    display: flex; align-items: center; gap: 12px;
+    animation: floatY 4s ease-in-out infinite;
+  }
+  .hero-float-card2 {
+    position: absolute; top: 24px; right: -20px;
+    background: var(--white); border-radius: 16px;
+    padding: 14px 18px; box-shadow: 0 12px 40px rgba(0,0,0,0.08);
+    animation: floatY 4s ease-in-out 1.5s infinite;
+  }
+  .float-icon {
+    width: 36px; height: 36px; border-radius: 10px;
+    background: var(--peach-lt);
+    display: flex; align-items: center; justify-content: center; font-size: 18px;
+  }
+  .float-text-main { font-family: 'Syne', sans-serif; font-weight: 600; font-size: 14px; color: var(--ink); }
+  .float-text-sub { font-size: 11px; color: var(--mid); margin-top: 2px; }
+  .float-tag {
+    font-family: 'Syne', sans-serif; font-size: 12px; font-weight: 600;
+    color: var(--sage); background: rgba(122,158,126,0.12);
+    padding: 6px 14px; border-radius: 100px;
+  }
+
+  @media (max-width: 768px) {
+    .hero { grid-template-columns: 1fr; padding: 100px 20px 60px; gap: 40px; }
+    .hero-visual { order: -1; }
+    .hero-img-wrap { max-width: 300px; margin: 0 auto; }
+  }
+</style>

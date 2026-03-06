@@ -1,0 +1,127 @@
+---
+---
+
+<section class="stream-schedule" id="schedule">
+  <div class="stream-grid">
+    <div class="stream-left reveal">
+      <div class="stream-eyebrow">Live Schedule</div>
+      <h2 class="stream-heading">
+        每週固定<br>
+        <em>直播時間</em>
+      </h2>
+      <p class="stream-desc">
+        想跟我一起玩遊戲、聊天嗎？<br>
+        準時來直播間就對了！
+      </p>
+      <div class="platform-links">
+        <a href="#" class="platform-btn platform-douyin">抖音直播</a>
+        <a href="#" class="platform-btn platform-twitch">Twitch</a>
+      </div>
+    </div>
+    <div class="stream-right reveal reveal-delay-2">
+      <div class="schedule-list">
+        <div class="schedule-item live">
+          <div class="schedule-day">Mon</div>
+          <div class="schedule-time">21:00</div>
+          <div class="schedule-title-text">遊戲實況（不定遊戲）</div>
+          <span class="live-badge">LIVE</span>
+        </div>
+        <div class="schedule-item">
+          <div class="schedule-day">Wed</div>
+          <div class="schedule-time">20:00</div>
+          <div class="schedule-title-text">聊天 / Q&A 直播</div>
+        </div>
+        <div class="schedule-item">
+          <div class="schedule-day">Fri</div>
+          <div class="schedule-time">21:30</div>
+          <div class="schedule-title-text">和大家一起打遊戲！</div>
+        </div>
+        <div class="schedule-item">
+          <div class="schedule-day">Sun</div>
+          <div class="schedule-time">15:00</div>
+          <div class="schedule-title-text">下午茶 x 隨意聊天</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .stream-schedule {
+    padding: 100px 48px;
+    background: var(--ink);
+    color: var(--white);
+    position: relative; overflow: hidden;
+  }
+  .stream-schedule::before {
+    content: ''; position: absolute;
+    top: -20%; right: -10%;
+    width: 700px; height: 700px;
+    background: radial-gradient(ellipse, rgba(122,158,126,0.08) 0%, transparent 65%);
+    border-radius: 50%;
+  }
+  .stream-grid {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 80px; align-items: start;
+    position: relative; z-index: 1;
+  }
+  .stream-eyebrow {
+    font-family: 'Syne', sans-serif; font-size: 12px; font-weight: 600;
+    letter-spacing: 0.15em; text-transform: uppercase;
+    color: var(--sage); margin-bottom: 16px;
+  }
+  .stream-heading {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(32px, 4vw, 48px);
+    line-height: 1.15; color: var(--white); margin-bottom: 20px;
+  }
+  .stream-heading em { font-style: italic; color: var(--sage-lt); }
+  .stream-desc { font-size: 15px; line-height: 1.8; color: rgba(255,255,255,0.5); margin-bottom: 32px; }
+  .platform-links { display: flex; gap: 12px; flex-wrap: wrap; }
+  .platform-btn {
+    font-family: 'Syne', sans-serif; font-size: 13px; font-weight: 600;
+    padding: 12px 24px; border-radius: 100px;
+    text-decoration: none; transition: transform 0.2s, box-shadow 0.3s;
+  }
+  .platform-btn:hover { transform: translateY(-2px); }
+  .platform-douyin {
+    background: #fe2c55; color: white;
+    box-shadow: 0 4px 20px rgba(254,44,85,0.3);
+  }
+  .platform-douyin:hover { box-shadow: 0 8px 28px rgba(254,44,85,0.5); }
+  .platform-twitch {
+    background: #9147ff; color: white;
+    box-shadow: 0 4px 20px rgba(145,71,255,0.3);
+  }
+  .platform-twitch:hover { box-shadow: 0 8px 28px rgba(145,71,255,0.5); }
+  .schedule-list { display: flex; flex-direction: column; gap: 4px; }
+  .schedule-item {
+    display: flex; align-items: center; gap: 20px;
+    padding: 20px 24px; border-radius: 14px;
+    background: rgba(255,255,255,0.04); transition: background 0.3s; cursor: default;
+  }
+  .schedule-item:hover { background: rgba(255,255,255,0.08); }
+  .schedule-item.live { background: rgba(122,158,126,0.12); }
+  .schedule-day {
+    font-family: 'Syne', sans-serif; font-size: 11px; font-weight: 700;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--sage-lt); width: 36px; flex-shrink: 0;
+  }
+  .schedule-time {
+    font-family: 'Syne', sans-serif; font-size: 13px; font-weight: 600;
+    color: rgba(255,255,255,0.5); width: 56px; flex-shrink: 0;
+  }
+  .schedule-title-text { font-size: 14px; color: rgba(255,255,255,0.8); flex: 1; }
+  .live-badge {
+    font-family: 'Syne', sans-serif; font-size: 10px; font-weight: 700;
+    letter-spacing: 0.1em; text-transform: uppercase;
+    background: var(--sage); color: white;
+    padding: 4px 10px; border-radius: 100px;
+    animation: livePulse 2s infinite;
+  }
+
+  @media (max-width: 768px) {
+    .stream-schedule { padding: 60px 20px; }
+    .stream-grid { grid-template-columns: 1fr; gap: 40px; }
+  }
+</style>
